@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wycena | Dekarstwo Maciejewski - Kalkulator Kosztów</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Outfit:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span>Wólka Niedźwiedzka, woj. podkarpackie</span>
+            <a href="tel:+48123456789">Zadzwoń: +48 660 830 740</a>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar container">
+            <div class="logo">
+                <span class="logo-bold">MACIEJEWSKI</span>
+                <span class="logo-light">DEKARSTWO</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="uslugi.html">Usługi</a></li>
+                <li><a href="o-nas.html">O Nas</a></li>
+                <li><a href="realizacje.html">Realizacje</a></li>
+                <li><a href="bezpl-wycena.html" class="active nav-cta">Bezpłatna Wycena</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Konfigurator Wyceny</h1>
+            <p>Skorzystaj z narzędzia, aby otrzymać przybliżony kosztorys materiałów i robocizny.</p>
+        </div>
+    </section>
+
+    <section class="quote-calculator container">
+        <div class="calculator-grid">
+
+            <div class="calc-inputs">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <h3>Rodzaj Pokrycia</h3>
+                    <div class="option-grid">
+                        <label class="option-card">
+                            <input type="radio" name="material" value="180" checked>
+                            <span class="option-title">Dachówka Ceramiczna</span>
+                            <span class="option-desc">Trwałość na pokolenia</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="material" value="120">
+                            <span class="option-title">Blachodachówka</span>
+                            <span class="option-desc">Nowoczesność i lekkość</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="material" value="140">
+                            <span class="option-title">Blacha na Rąbek</span>
+                            <span class="option-desc">Minimalistyczny design</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <h3>Powierzchnia Dachu (m²)</h3>
+                    <input type="number" id="roof-area" value="150" min="50" step="10" class="input-field">
+                </div>
+
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <h3>Usługi Dodatkowe</h3>
+                    <div class="checkbox-list">
+                        <label class="check-item">
+                            <input type="checkbox" class="extra-service" value="45"> Montaż okien dachowych
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox" class="extra-service" value="30"> System rynnowy
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox" class="extra-service" value="20"> Obróbka kominów
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-result">
+                <div class="result-sticky">
+                    <h4>Szacunkowy Koszt</h4>
+                    <div class="price-display">
+                        <span id="total-price">0</span> <small>PLN</small>
+                    </div>
+                    <p class="price-note">* Cena netto (materiały + robocizna). Dokładna wycena wymaga oględzin na
+                        miejscu inwestycji.</p>
+
+                    <hr>
+
+                    <form id="quote-form">
+                        <input type="text" placeholder="Imię i Nazwisko" required class="form-input">
+                        <input type="email" placeholder="Adres E-mail" required class="form-input">
+                        <input type="tel" placeholder="Numer Telefonu" required class="form-input">
+                        <button type="submit" class="btn btn-primary btn-full">Wyślij do Weryfikacji</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-bold">MACIEJEWSKI</span>
+                    <span class="logo-light">DEKARSTWO</span>
+                </div>
+                <p>Twój zaufany partner w dekarstwie od 2011 roku.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Dane Kontaktowe</h4>
+                <p>Wólka Niedźwiedzka 123</p>
+                <p>36-050 Sokołów Małopolski</p>
+                <p>E-mail: biuro@dekarstwo-maciejewski.pl</p>
+            </div>
+        </div>
+        <div class="footer-legal container">
+            <p>&copy; 2026 Dekarstwo Maciejewski. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script src="calculator.js"></script>
+</body>
+
+</html>
